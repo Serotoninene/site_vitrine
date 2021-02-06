@@ -1,0 +1,182 @@
+/* PARTIALS */
+/* VARIABLES */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: futura;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #707070; }
+
+body {
+  background-color: #F3EBE7; }
+
+/* SERVICES */
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+
+.flex {
+  display: flex; }
+
+.absolute {
+  position: absolute; }
+
+.relative {
+  position: relative; }
+
+.resp {
+  width: 100%; }
+
+.border {
+  border: solid 1px #2B2B2B; }
+
+/* NAVBAR */
+navbar {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  padding-top: 30px; }
+  navbar .logoSite {
+    width: 3vw; }
+  navbar p:first-of-type {
+    color: #2B2B2B; }
+
+/* FOOTER */
+footer {
+  margin-top: 50px; }
+  footer ul {
+    margin-top: 50px;
+    background-color: #707070;
+    padding: 100px 0;
+    justify-content: space-around; }
+    footer ul a {
+      color: #F3EBE7;
+      text-decoration: none;
+      font-size: 3em; }
+
+#projects section:nth-of-type(1) {
+  margin-top: 100px; }
+  #projects section:nth-of-type(1) hr {
+    margin: 0 0 10px 0; }
+#projects hr {
+  margin: 50px 0; }
+#projects .description {
+  grid-column: span 3;
+  flex-direction: column;
+  justify-content: space-between; }
+  #projects .description h1 {
+    font-weight: bold;
+    font-size: 2rem; }
+  #projects .description h2 {
+    color: #2B2B2B;
+    font-size: 0.9rem; }
+  #projects .description p {
+    margin-top: 10px; }
+#projects .video {
+  grid-column: span 9; }
+
+#home {
+  /*HEADER */
+  /* ANIMATION DES LETTRES CHANGEANTES DANS LE HERO BANNER */ }
+  #home .cercleContainer {
+    top: 36%;
+    left: 70%;
+    height: 200px;
+    overflow: hidden; }
+  #home .cercle {
+    width: 300px;
+    height: 300px;
+    background-color: #2B2B2B;
+    border-radius: 50%; }
+  #home .linkedinLogo {
+    background-image: url("../../public/assets/logos/linkedin-icon_dark.svg");
+    background-size: contain;
+    width: 43px;
+    height: 43px;
+    top: 35%;
+    left: 28%; }
+    #home .linkedinLogo:hover {
+      background-size: contain;
+      background-image: url("../../public/assets/logos/linkedin-icon_light.svg"); }
+  #home span {
+    color: #2B2B2B; }
+  #home header {
+    width: 100vw;
+    height: 100vh; }
+  #home header h1 {
+    width: 75vw;
+    margin: 50px auto;
+    font-size: 6em; }
+  #home .text:after {
+    content: '';
+    width: 6px;
+    height: 100px;
+    top: 7px;
+    right: -5;
+    position: absolute;
+    background-color: #2B2B2B;
+    animation: blink 1s infinite ease; }
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  #home .description {
+    margin: 50px 0; }
+  #home h2 {
+    font-size: 5.5em;
+    line-height: 100px;
+    letter-spacing: -0.5px; }
+  #home .miniText {
+    justify-content: flex-end; }
+    #home .miniText p {
+      font-size: 3.5em;
+      width: 60%;
+      line-height: 70px;
+      mix-blend-mode: luminosity; }
+  #home .photoRando {
+    width: 50%;
+    z-index: -1;
+    top: 35%; }
+  #home .skills {
+    margin: 80px 0; }
+    #home .skills h2 {
+      font-size: 12em;
+      text-align: center;
+      font-weight: bold; }
+    #home .skills .row {
+      justify-content: space-around;
+      margin-top: 70px; }
+      #home .skills .row div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%; }
+        #home .skills .row div h3 {
+          font-size: 4em; }
+        #home .skills .row div img {
+          margin: 30px 0; }
+        #home .skills .row div p {
+          font-size: 1.7em;
+          text-align: center; }
+
+#resume .cv {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 50px; }
+#resume .cv img {
+  width: 30%;
+  margin: 25px;
+  transition: width 0.4s ease-in-out; }
+  #resume .cv img:hover {
+    width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

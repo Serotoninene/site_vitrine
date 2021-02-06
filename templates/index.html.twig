@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Homepage {% endblock title %}
+
+{% block body %}
+<body id="home">
+    <header>
+
+        {# ABSOLUTE POSITIONNED DIV : CIRCLE AND LINKEDIN LOGO#}
+        <div class="cercleContainer absolute">
+            <div class="cercle"></div>
+        </div>
+
+        <a href="https://www.linkedin.com/in/alexandre-pujol-333172b3/">
+            <div class="linkedinLogo absolute">
+            </div>
+        </a>
+
+        {#JUMBOTRON#}
+        <h1 >
+            Hello, my name is <span>Alex</span>. <br> I'm a
+            <span class="textwrapper relative">
+                <span class = "text"></span>
+            </span>
+            <br>full stack developer
+        </h1>
+
+    </header>
+
+
+    <main class="container ">
+
+        <section class="description relative">
+
+            <div class="absolute photoRando">
+                <img src="{{ asset('assets/photos/photoRando.png') }}" alt="Alex en randonnée" class="resp">
+            </div>
+
+            <h2 > I am a young developer <br> from <span>Toulouse</span>, France, passionate about web development, eager to learn </h2>
+            <div class="miniText flex">
+                <p> and create. I also have skills in design and <span>illustration</span>; thanks to my master in marketing and my professional  experiences I learned soft skills and how to work in a dynamic and team. </p>
+            </div>
+
+        </section>
+
+        <section class="skills">
+
+            <h2>SKILLS</h2>
+
+            {# UNE LIGNE DE DEUX SKILLS#}
+            <div class="flex row">
+
+                <div class="flex">
+
+                    <h3>Design</h3>
+                    <img src="{{ asset('assets/icons/design_icon.svg') }}" alt="Design Icon">
+                    <p>Adobe Suite(Photoshop,Illustrator, XD), Figma, Procreate</p>
+
+                </div>
+
+                <div class="flex">
+
+                    <h3>Front-end</h3>
+                    <img src="{{ asset('assets/icons/front-end_icon.svg') }}" alt="Design Icon">
+                    <p>HTML, CSS, SCSS, Javascript, <br> Framework: React</p>
+
+                </div>
+            </div>
+
+            <div class="flex row">
+                <div class="flex">
+                    <h3>Back-end</h3>
+                    <img src="{{ asset('assets/icons/back-end_icon.svg') }}" alt="Design Icon">
+                    <p>PHP, MySQL, Apache, Nodejs, <br> Framework : Symfony</p>
+                </div>
+                <div class="flex">
+                    <h3>Others</h3>
+                    <img src="{{ asset('assets/icons/others_icon.svg') }}" alt="Design Icon">
+                    <p>Trilingual (French, English, Spanish), <br> master in marketing and management</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="{{ asset('js/changingLetters.js') }}"></script>
+</body>
+{% endblock body %}

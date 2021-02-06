@@ -1,0 +1,37 @@
+/* NAVBAR */
+navbar {
+  justify-content:space-between;
+  align-items: center;
+  font-size: 1.5em;
+  padding-top: 30px;
+
+  .logoSite{
+    width : 3vw;
+  }
+
+  p:first-of-type{
+    color: $dark;
+  }
+}
+
+
+/* FOOTER */
+footer{
+
+  margin-top: 50px;
+
+  ul{
+
+    margin-top:50px;
+    background-color: $medium;
+    padding: 100px 0;
+    justify-content: space-around;
+
+    a{
+      color: $light;
+      text-decoration: none;
+      font-size: 3em;
+    }
+  }
+
+}
