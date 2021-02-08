@@ -1,6 +1,7 @@
 // PAGE D'ACCUEIL
 #home{
-  /*HEADER */
+
+  /* ------ HEADER ------ */
 
   // DIV ABSOLUTE POSITIONNED
   .cercleContainer{
@@ -17,13 +18,14 @@
     border-radius: 50%;
   }
 
-  .linkedinLogo{
+
+
+  .linkedinLogo div{
     background-image: url("../../public/assets/logos/linkedin-icon_dark.svg");
     background-size: contain;
     width: 43px;
     height: 43px;
-    top: 35%;
-    left: 28%;
+
 
     &:hover{
       background-size: contain;
@@ -45,7 +47,6 @@
     width: 75vw;
     margin: 50px auto;
     font-size: 6em;
-
   }
 
   /* ANIMATION DES LETTRES CHANGEANTES DANS LE HERO BANNER */
@@ -72,8 +73,7 @@
 
   };
 
-  // DESCRIPTION + PHOTO
-  //DESCRIPTION (h2 + p)
+  // DESCRIPTION (h2 + p)
   .description{
     margin: 50px 0;
   }
@@ -92,6 +92,17 @@
       width: 60%;
       line-height: 70px;
       mix-blend-mode: luminosity;
+
+      a{
+        color: $dark;
+        text-decoration: none;
+
+        &:hover{
+        color: $light;
+        -webkit-text-stroke: 1px $dark;
+
+        }
+      }
     }
   }
 

@@ -11,16 +11,19 @@
             <div class="cercle"></div>
         </div>
 
-        <a href="https://www.linkedin.com/in/alexandre-pujol-333172b3/">
-            <div class="linkedinLogo absolute">
-            </div>
-        </a>
 
-        {#JUMBOTRON#}
+
+        {# -------------- JUMBOTRON -------------- #}
         <h1 >
-            Hello, my name is <span>Alex</span>. <br> I'm a
+            Hello, my name is
+            <span >
+                Alex
+                <a class="linkedinLogo absolute" href="https://www.linkedin.com/in/alexandre-pujol-333172b3/">
+                    <div ></div>
+                </a>
+            </span>. <br> I'm a
             <span class="textwrapper relative">
-                <span class = "text"></span>
+                <span class = "text"> </span>
             </span>
             <br>full stack developer
         </h1>
@@ -30,19 +33,26 @@
 
     <main class="container ">
 
+        {# -------------- DESCRIPTION --------------  #}
+
         <section class="description relative">
+
+
 
             <div class="absolute photoRando">
                 <img src="{{ asset('assets/photos/photoRando.png') }}" alt="Alex en randonnée" class="resp">
             </div>
-
-            <h2 > I am a young developer <br> from <span>Toulouse</span>, France, passionate about web development, eager to learn </h2>
+            <div class="photoToulouse">
+                <img src="{{ asset('assets/photos/photoToulouse.jpg') }}" alt="" class="resp">
+            </div>
+            <h2 > I am a young developer <br> from <span class="toulouse">Toulouse</span>, France, passionate about web development, eager to learn </h2>
             <div class="miniText flex">
-                <p> and create. I also have skills in design and <span>illustration</span>; thanks to my master in marketing and my professional  experiences I learned soft skills and how to work in a dynamic and team. </p>
+                <p> and create. I also have skills in design and <a href="https://www.instagram.com/serotoninene/">illustration</a>; thanks to my master in marketing and my professional  experiences I learned soft skills and how to work in a dynamic and team. </p>
             </div>
 
         </section>
 
+        {# -------------- SKILLS --------------  #}
         <section class="skills">
 
             <h2>SKILLS</h2>
@@ -84,6 +94,10 @@
 
     </main>
 
-    <script src="{{ asset('js/changingLetters.js') }}"></script>
+    {% block scripts %}
+        <script src="{{ asset('js/changingLetters.js') }}"></script>
+        <script src="{{ asset('js/index.js') }}"></script>
+    {% endblock scripts %}
+
 </body>
 {% endblock body %}

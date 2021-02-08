@@ -40,7 +40,10 @@
 </navbar>
 
 
-        {% block body %}{% endblock %}
+        {% block body %}
+
+        {% block scripts %} {% endblock scripts %}
+        {% endblock %}
 
     <footer>
         <navbar class="flex container">

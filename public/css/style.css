@@ -37,6 +37,9 @@ body {
 .border {
   border: solid 1px #2B2B2B; }
 
+.none {
+  display: none; }
+
 /* NAVBAR */
 navbar {
   justify-content: space-between;
@@ -83,7 +86,7 @@ footer {
   grid-column: span 9; }
 
 #home {
-  /*HEADER */
+  /* ------ HEADER ------ */
   /* ANIMATION DES LETTRES CHANGEANTES DANS LE HERO BANNER */ }
   #home .cercleContainer {
     top: 36%;
@@ -95,14 +98,12 @@ footer {
     height: 300px;
     background-color: #2B2B2B;
     border-radius: 50%; }
-  #home .linkedinLogo {
+  #home .linkedinLogo div {
     background-image: url("../../public/assets/logos/linkedin-icon_dark.svg");
     background-size: contain;
     width: 43px;
-    height: 43px;
-    top: 35%;
-    left: 28%; }
-    #home .linkedinLogo:hover {
+    height: 43px; }
+    #home .linkedinLogo div:hover {
       background-size: contain;
       background-image: url("../../public/assets/logos/linkedin-icon_light.svg"); }
   #home span {
@@ -141,6 +142,12 @@ footer {
       width: 60%;
       line-height: 70px;
       mix-blend-mode: luminosity; }
+      #home .miniText p a {
+        color: #2B2B2B;
+        text-decoration: none; }
+        #home .miniText p a:hover {
+          color: #F3EBE7;
+          -webkit-text-stroke: 1px #2B2B2B; }
   #home .photoRando {
     width: 50%;
     z-index: -1;

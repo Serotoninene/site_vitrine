@@ -13,8 +13,8 @@ $dark : #2B2B2B;
   font-weight: 400 ;
   letter-spacing: 1px;
   color : $medium;
-
 }
+
 
 body{
   background-color: $light;
@@ -49,5 +49,9 @@ body{
 
 .border{
   border: solid 1px $dark;
+}
+
+.none{
+  display: none;
 }
 
