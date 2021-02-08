@@ -8,8 +8,10 @@
 
     <title></title>
 
+
     <link rel="icon" href="{{ asset('assets/logos/shuriIcon.svg') }}" type="image/icon type">
     <link rel="stylesheet" href= "{{ asset( 'css/style.css' ) }}">
+    {% block styles %} {% endblock styles %}
 
     <style>
         @font-face {
@@ -34,7 +36,13 @@
         <a href="{{ path('homepage') }}"> <img src="{{ asset('assets/logos/shuriIcon.svg') }}" alt="Logo du Site" class="resp"> </a>
     </div>
 
-    <p> <a href="{{ path('projects') }}">PROJECTS</a>, <a href="{{ path('resume') }}">RESUME</a>, <a href="mailto:pujol.alexandre@hotmail.fr">CONTACT</a> </p>
+
+    <ul class="flex">
+        <li> <a href="{{ path('projects') }}">PROJECTS</a> </li>
+        <li> <a href="{{ path('resume') }}">RESUME</a> </li>
+        <li> <a href="mailto:pujol.alexandre@hotmail.fr">CONTACT</a></li>
+    </ul>
+
 
     <p>En - Fr</p>
 </navbar>
@@ -51,12 +59,18 @@
                 <a href="{{ path('homepage') }}"> <img src="{{ asset('assets/logos/shuriIcon.svg') }}" alt="Logo du Site" class="resp"> </a>
             </div>
 
-            <p> <a href="{{ path('projects') }}">PROJECTS</a>, <a href="{{ path('resume') }}">RESUME</a>, <a href="mailto:pujol.alexandre@hotmail.fr">CONTACT</a> </p>
+
+            <ul class="flex">
+                <li> <a href="{{ path('projects') }}">PROJECTS</a> </li>
+                <li> <a href="{{ path('resume') }}">RESUME</a> </li>
+                <li> <a href="mailto:pujol.alexandre@hotmail.fr">CONTACT</a></li>
+            </ul>
+
 
             <p>En - Fr</p>
         </navbar>
 
-        <ul class="flex">
+        <ul class="flex" data-aos="fade-up">
             <li>
                 <a href="#">GITHUB</a>
             </li>   <li>

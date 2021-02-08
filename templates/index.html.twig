@@ -2,26 +2,28 @@
 
 {% block title %} Homepage {% endblock title %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+{% endblock styles %}
+
 {% block body %}
 <body id="home">
     <header>
 
-        {# ABSOLUTE POSITIONNED DIV : CIRCLE AND LINKEDIN LOGO#}
-        <div class="cercleContainer absolute">
+        {# ABSOLUTE POSITIONNED DIV : CIRCLE #}
+        <div class="cercleContainer absolute" data-aos="fade-up">
             <div class="cercle"></div>
         </div>
-
-
 
         {# -------------- JUMBOTRON -------------- #}
         <h1 >
             Hello, my name is
-            <span >
-                Alex
+            <span class="relative">
+                Alex.
                 <a class="linkedinLogo absolute" href="https://www.linkedin.com/in/alexandre-pujol-333172b3/">
-                    <div ></div>
+                    <div></div>
                 </a>
-            </span>. <br> I'm a
+            </span> <br> I'm a
             <span class="textwrapper relative">
                 <span class = "text"> </span>
             </span>
@@ -37,12 +39,10 @@
 
         <section class="description relative">
 
-
-
             <div class="absolute photoRando">
                 <img src="{{ asset('assets/photos/photoRando.png') }}" alt="Alex en randonnée" class="resp">
             </div>
-            <div class="photoToulouse">
+            <div class="photoToulouse absolute none">
                 <img src="{{ asset('assets/photos/photoToulouse.jpg') }}" alt="" class="resp">
             </div>
             <h2 > I am a young developer <br> from <span class="toulouse">Toulouse</span>, France, passionate about web development, eager to learn </h2>
@@ -57,8 +57,8 @@
 
             <h2>SKILLS</h2>
 
-            {# UNE LIGNE DE DEUX SKILLS#}
-            <div class="flex row">
+            {# FIRST LINE #}
+            <div class="flex row" data-aos="fade-up">
 
                 <div class="flex">
 
@@ -77,7 +77,8 @@
                 </div>
             </div>
 
-            <div class="flex row">
+            {# SECOND LINE #}
+            <div class="flex row" data-aos="fade-up">
                 <div class="flex">
                     <h3>Back-end</h3>
                     <img src="{{ asset('assets/icons/back-end_icon.svg') }}" alt="Design Icon">
@@ -86,7 +87,7 @@
                 <div class="flex">
                     <h3>Others</h3>
                     <img src="{{ asset('assets/icons/others_icon.svg') }}" alt="Design Icon">
-                    <p>Trilingual (French, English, Spanish), <br> master in marketing and management</p>
+                    <p>Trilingual (French, English, Spanish), master in marketing and management</p>
                 </div>
             </div>
 
@@ -96,6 +97,7 @@
 
     {% block scripts %}
         <script src="{{ asset('js/changingLetters.js') }}"></script>
+        <script src="{{ asset('js/aos.js') }}"></script>
         <script src="{{ asset('js/index.js') }}"></script>
     {% endblock scripts %}
 

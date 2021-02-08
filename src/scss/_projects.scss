@@ -19,7 +19,7 @@
 
     h1{
       font-weight: bold;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     h2{
@@ -32,8 +32,17 @@
     }
 
   }
+
   .video{
+    align-items: flex-end;
+    padding-top: 10px;
     grid-column: span 9;
+    transform-style: preserve-3d;
+    perspective: 10px;
+
+    img{
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
   }
 
 

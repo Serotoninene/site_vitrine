@@ -2,6 +2,10 @@
 
 {% block title %} My Projects {% endblock title %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+{% endblock styles %}
+
 {% block body %}
 
     <body id="projects">
@@ -14,9 +18,10 @@
 
                     <div>
                         <h2> DESCRIPTION</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam iste qui repudiandae tempora. Consequatur corporis eos magni officia omnis, sint veniam? Accusamus cum, cupiditate error facere omnis porro veniam!</p>
+                        <p> Serotoninene is my illustrator alter ego. I have conveived a website to present and sell my illustrations to the world. </p>
                     </div>
                 </div>
+
                 <div class="video">
                     <img src="{{ asset('assets/photos/serotoninene_capture.png') }}" alt="serotoninene's Project" class="resp">
                 </div>
@@ -55,6 +60,10 @@
             </div>
         </section>
 
+        {% block scripts %}
+            <script src="{{ asset('js/aos.js') }}"></script>
+            <script src="{{ asset('js/projects.js') }}"></script>
+        {% endblock scripts %}
     </body>
 
 {% endblock body %}

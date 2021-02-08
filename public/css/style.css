@@ -42,28 +42,59 @@ body {
 
 /* NAVBAR */
 navbar {
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.5em;
   padding-top: 30px; }
   navbar .logoSite {
     width: 3vw; }
-  navbar p:first-of-type {
-    color: #2B2B2B; }
+  navbar ul {
+    width: 50vw;
+    justify-content: space-between; }
+    navbar ul a {
+      text-decoration: none;
+      color: #2B2B2B; }
+      navbar ul a:hover {
+        text-decoration: underline; }
 
 /* FOOTER */
 footer {
   margin-top: 50px; }
-  footer ul {
+  footer ul:last-child {
     margin-top: 50px;
     background-color: #707070;
     padding: 100px 0;
     justify-content: space-around; }
-    footer ul a {
+    footer ul:last-child a {
       color: #F3EBE7;
       text-decoration: none;
       font-size: 3em; }
 
+@media screen and (max-width: 992px) {
+  header h1 {
+    font-size: 5em; }
+
+  .cercle {
+    display: none; }
+
+  footer navbar {
+    margin-bottom: 50px; }
+  footer ul:last-child {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  navbar ul {
+    width: 55vw; }
+  navbar li {
+    font-size: 1.3rem; }
+  navbar p {
+    font-size: 1rem; } }
+@media screen and (max-width: 576px) {
+  navbar ul {
+    width: 55vw; }
+  navbar li {
+    font-size: 0.7rem; }
+  navbar p {
+    font-size: 0.5rem; } }
 #projects section:nth-of-type(1) {
   margin-top: 100px; }
   #projects section:nth-of-type(1) hr {
@@ -76,14 +107,20 @@ footer {
   justify-content: space-between; }
   #projects .description h1 {
     font-weight: bold;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
   #projects .description h2 {
     color: #2B2B2B;
     font-size: 0.9rem; }
   #projects .description p {
     margin-top: 10px; }
 #projects .video {
-  grid-column: span 9; }
+  align-items: flex-end;
+  padding-top: 10px;
+  grid-column: span 9;
+  transform-style: preserve-3d;
+  perspective: 10px; }
+  #projects .video img {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
 
 #home {
   /* ------ HEADER ------ */
@@ -98,14 +135,16 @@ footer {
     height: 300px;
     background-color: #2B2B2B;
     border-radius: 50%; }
-  #home .linkedinLogo div {
-    background-image: url("../../public/assets/logos/linkedin-icon_dark.svg");
-    background-size: contain;
-    width: 43px;
-    height: 43px; }
-    #home .linkedinLogo div:hover {
+  #home .linkedinLogo {
+    right: -10px; }
+    #home .linkedinLogo div {
+      background-image: url("../../public/assets/logos/linkedin-icon_dark.svg");
       background-size: contain;
-      background-image: url("../../public/assets/logos/linkedin-icon_light.svg"); }
+      width: 43px;
+      height: 43px; }
+      #home .linkedinLogo div:hover {
+        background-size: contain;
+        background-image: url("../../public/assets/logos/linkedin-icon_light.svg"); }
   #home span {
     color: #2B2B2B; }
   #home header {
@@ -135,6 +174,9 @@ footer {
     font-size: 5.5em;
     line-height: 100px;
     letter-spacing: -0.5px; }
+    #home h2 span:hover {
+      color: #F3EBE7;
+      -webkit-text-stroke: 1px #2B2B2B; }
   #home .miniText {
     justify-content: flex-end; }
     #home .miniText p {
@@ -151,28 +193,67 @@ footer {
   #home .photoRando {
     width: 50%;
     z-index: -1;
-    top: 35%; }
+    top: 35%;
+    transition: all ease 10s; }
+  #home .photoToulouse {
+    z-index: -1;
+    width: 50%;
+    left: 40%;
+    top: 10%; }
   #home .skills {
     margin: 80px 0; }
     #home .skills h2 {
-      font-size: 12em;
+      font-size: 8em;
       text-align: center;
       font-weight: bold; }
     #home .skills .row {
-      justify-content: space-around;
-      margin-top: 70px; }
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 50px; }
       #home .skills .row div {
+        margin: 0 auto;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 50%; }
+        grid-column: span 6;
+        width: 60%; }
         #home .skills .row div h3 {
-          font-size: 4em; }
+          font-size: 2em; }
         #home .skills .row div img {
           margin: 30px 0; }
         #home .skills .row div p {
-          font-size: 1.7em;
+          font-size: 1.2em;
           text-align: center; }
+  @media screen and (max-width: 992px) {
+    #home header h1 {
+      font-size: 5em; }
+    #home .cercle {
+      display: none; }
+    #home .description h2 {
+      font-size: 4em;
+      letter-spacing: -1px; }
+    #home .description p {
+      font-size: 2em;
+      line-height: 60px;
+      padding-bottom: 30px; }
+    #home .photoRando {
+      top: 50%; } }
+  @media screen and (max-width: 576px) {
+    #home header h1 {
+      font-size: 4em;
+      line-height: 1.5em; }
+    #home .linkedinLogo div {
+      width: 30px;
+      height: 30px; }
+    #home .description h2 {
+      font-size: 3em;
+      letter-spacing: -1px; }
+    #home .description p {
+      font-size: 2em;
+      line-height: 50px;
+      padding-bottom: 30px; }
+    #home .skills .row div {
+      grid-column: span 12; } }
 
 #resume .cv {
   justify-content: center;
