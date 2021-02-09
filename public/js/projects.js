@@ -2,7 +2,8 @@
 AOS.init();
 
 /* PERSPECTIVE EFFECT */
-const projects = document.querySelectorAll('.video')
+const projects = document.querySelectorAll('.video');
+
 
 projects.forEach(project => {
     let count = 1;

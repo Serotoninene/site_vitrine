@@ -13,13 +13,14 @@
   }
 
   .description{
+    border: solid $light 1px;
     grid-column: span 3;
     flex-direction: column;
     justify-content: space-between;
 
     h1{
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     h2{
@@ -34,6 +35,7 @@
   }
 
   .video{
+    justify-content: center;
     align-items: flex-end;
     padding-top: 10px;
     grid-column: span 9;
@@ -42,6 +44,8 @@
 
     img{
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      height: 100%;
+
     }
   }
 

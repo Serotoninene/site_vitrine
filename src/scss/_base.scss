@@ -41,6 +41,11 @@ footer{
       color: $light;
       text-decoration: none;
       font-size: 3em;
+
+      &:hover{
+        color: $medium;
+        -webkit-text-stroke: 1px $light;
+      }
     }
   }
 

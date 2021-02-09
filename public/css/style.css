@@ -69,6 +69,9 @@ footer {
       color: #F3EBE7;
       text-decoration: none;
       font-size: 3em; }
+      footer ul:last-child a:hover {
+        color: #707070;
+        -webkit-text-stroke: 1px #F3EBE7; }
 
 @media screen and (max-width: 992px) {
   header h1 {
@@ -102,25 +105,28 @@ footer {
 #projects hr {
   margin: 50px 0; }
 #projects .description {
+  border: solid #F3EBE7 1px;
   grid-column: span 3;
   flex-direction: column;
   justify-content: space-between; }
   #projects .description h1 {
     font-weight: bold;
-    font-size: 1.5rem; }
+    font-size: 2rem; }
   #projects .description h2 {
     color: #2B2B2B;
     font-size: 0.9rem; }
   #projects .description p {
     margin-top: 10px; }
 #projects .video {
+  justify-content: center;
   align-items: flex-end;
   padding-top: 10px;
   grid-column: span 9;
   transform-style: preserve-3d;
   perspective: 10px; }
   #projects .video img {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 100%; }
 
 #home {
   /* ------ HEADER ------ */
